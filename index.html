@@ -1,0 +1,83 @@
+<!-- Bootstrap -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      #result {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        text-align: center;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Insurance Policy Calculator :)</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+    <p> Enter your age to get your policy payment amount!</p>
+      </div>
+    </div>
+    <br />
+      <!-- User Input -->
+      <div class="row">
+        <div class="col-12">
+          <label for="Age">Enter your age</label>
+            <input type="number" id="Age" class="form-control" min="0" step="1"/>
+        </div>
+      </div>
+      <br />
+      <!-- Calculate Button -->
+    <div class = 'row'>
+      <div class = 'col-12 text-center'>
+        <button id="calculateButton">Calculate :0</button>
+      </div>
+    </div>
+      <br />
+      <br />
+    <div class = 'row'>
+      <div class = 'col-12 text-center'>
+        <p>Result Here:</p>
+        <p id="result"></p>
+      </div>
+    </div>
+      <br />
+      <br />
+      <br />
+      <br />
+    <div class = 'row'>
+      <div class = 'col-12 text-center'>
+        <button id="clearResult">Clear</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Button click event listener and function call -->
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#calculateButton').click(function () {
+          let age = $('#Age').val();
+          let result = (age * 5) + 300;
+          $('#result').text(result).fadeIn(1000)
+        });
+          $('#clearResult').click(function() {
+            $('#result').fadeOut(1000, function(){
+              $('#Age').val('');
+              $('#p').empty();
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
