@@ -18,7 +18,7 @@
     </style>
   </head>
   <body>
-
+    <!-- Formatting div's for beautifying :) -->
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
@@ -69,7 +69,7 @@
         $('#calculateButton').click(function () {
           let age = $('#Age').val();
           let result = (age * 5) + 300;
-          $('#result').text(result).fadeIn(1000)
+          $('#result').text("$" + result + "/year").fadeIn(1000)
         });
           $('#clearResult').click(function() {
             $('#result').fadeOut(1000, function(){
